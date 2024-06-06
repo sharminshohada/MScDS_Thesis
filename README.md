@@ -3,17 +3,15 @@ Clone the repository: git clone https://github.com/your-username/HandMovement.gi
 Download the LFS files: git lfs pull
 The remaining Python files can be viewed directly on GitHub.
 
-video_frame_viewer.py . This Python script uses OpenCV and Tkinter to play a video file and allow frame-by-frame navigation with the frame numbers displayed on the video. 
+video_frame_viewer.py: This script plays a video with frame numbers displayed on each frame by:
+1. Opening and processing the video file using OpenCV.
+2. Displaying the frame number on each frame of the video.
+3. Allowing the user to control the playback with the following features:
+- 'q' to quit the video playback.
+- 'n' to advance to the next frame.
+- 'p' to go back to the previous frame.
+- 'j' to jump to a specific frame based on user input.
+- Spacebar (' ') to toggle play/pause.
+4. Providing a GUI dialog for frame input using Tkinter when jumping to a specific frame.
 
-Requirements: Python installed, OpenCV library (cv2), Tkinter library (tk).
-
-Usage Instructions:
-Replace 'D:/Research/2024/2finalprep/P3_Cheerio_V.mp4' with the path to your video file.
-Run the script.
-The video will start in a paused state. Use the following keys to control playback:
-n: Advance to the next frame.
-p: Go back to the previous frame.
-j: Jump to a specific frame by entering the frame number in the dialog box.
-(spacebar): Toggle between play and pause.
-q: Quit the video player.
-This script is particularly useful for applications requiring precise video analysis and frame-level inspection, such as behavioral studies, motion analysis, or quality control in video production
+Requirements: Python installed, OpenCV library (cv2) installed, Tkinter library (tk and simpledialog) installed
